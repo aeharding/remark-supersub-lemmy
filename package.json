@@ -1,0 +1,51 @@
+{
+  "name": "remark-supersub-lemmy",
+  "version": "1.0.0",
+  "description": "",
+  "sideEffects": false,
+  "type": "module",
+  "exports": "./lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "test": "ava",
+    "build": "tsc"
+  },
+  "jest": {
+    "testMatch": [
+      "src/*.spec.ts"
+    ],
+    "transform": {
+      "^.+\\.(t|j)sx?$": "ts-jest"
+    }
+  },
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--import=tsimp"
+    ],
+    "snapshotDir": "__snapshots__"
+  },
+  "author": "",
+  "license": "AGPL-3.0-only",
+  "dependencies": {
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/mdast": "^4.0.3",
+    "@types/unist": "^3.0.2",
+    "ava": "^6.1.2",
+    "jest": "^29.7.0",
+    "rehype-stringify": "^10.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
+    "ts-jest": "^29.1.2",
+    "tsimp": "^2.0.11",
+    "typescript": "^5.4.2",
+    "unified": "^11.0.4"
+  }
+}
